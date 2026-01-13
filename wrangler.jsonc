@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "my-react-app",
+	"name": "my-landing-page-react",
 	"main": "worker/index.ts",
 	"compatibility_date": "2025-09-27",
 	"assets": {

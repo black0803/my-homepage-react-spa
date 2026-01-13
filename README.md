@@ -1,5 +1,8 @@
 # React + TypeScript + Vite
 
+ > Created using `npm create cloudflare@latest -- my-react-app --framework=react`
+ > Configuration: `TS+SWC`
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
