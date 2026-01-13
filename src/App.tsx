@@ -17,13 +17,9 @@ function App() {
     <div className="portfolio-container">
       <Header name={cv.name} role={cv.role} profileImage={profile} />
       <Skills skills={cv.skills} />
-      <br></br>
       <Experience experience={cv.experience} />
-      <br></br>
       <Guides guides={guides} />
-      <br></br>
       <BlogFeed />
-      <br></br>
       <Contacts items={links} />
     </div>
   )

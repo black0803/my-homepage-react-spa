@@ -30,7 +30,7 @@ export function BlogFeed() {
     }
 
 return (
-    <section className="mt-12">
+    <section className="mt-5 mb-5">
       <h3 className="text-2xl font-bold mb-6 dark:text-white">Latest from the Blog</h3>
       <div className="space-y-4">
         {posts.slice(0, 3)?.map((post) => (

@@ -5,7 +5,7 @@ interface ContactProps {
 }
 export function Contacts({items}: ContactProps) {
     return (
-        <section>
+        <section className="mt-5 mb-5">
             <h3 className="text-xl font-bold">Links & Contacts</h3>
             <br></br>
             <div  className="flex flex-wrap items-center gap-4 justify-center">

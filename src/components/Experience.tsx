@@ -6,7 +6,7 @@ interface ExperienceProps {
 
 export function Experience({experience}: ExperienceProps) {
     return (
-        <section>
+        <section className="mt-5">
             <h3 className="text-xl font-bold">Work History</h3>
             {experience.map(job => (
             <div key={job.company}>

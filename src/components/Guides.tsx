@@ -7,7 +7,7 @@ interface GuidesProps {
 export function Guides({guides}: GuidesProps) {
     let count = 0;
     return (
-        <section>
+        <section className="mt-5 mb-5">
             <h3 className="text-xl font-bold">Guides</h3>
             {guides.map(guide => (
             
