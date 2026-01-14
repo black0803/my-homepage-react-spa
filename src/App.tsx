@@ -22,10 +22,10 @@ import { Navigation } from './components/Navigation.tsx'
 import { Certificates } from './components/Certificates.tsx'
 
 function App() {
-  const [state, setState] = useState<Number>(0);
+  const [state, setState] = useState<number>(0);
   
   return (
-    <div className="portfolio-container">
+    <div className="portfoilo-container p-4">
       <Header name={cv.name} role={cv.role} profileImage={profile} />
       <Navigation setState={setState} />
       {state === 0 && <div><Skills skills={cv.skills} /><Experience experience={cv.experience} /><Certificates certs={certs} /></div>}

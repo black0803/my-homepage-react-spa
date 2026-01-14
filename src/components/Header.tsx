@@ -10,7 +10,7 @@ export function Header({name, role, profileImage}: HeaderProps) {
         <div className="flex items-center gap-4">
         <img src={profileImage} className="w-30 h-30 rounded-full object-cover logo" />
           <div className="flex-grow">
-            <h1 className="text-4xl font-bold text-shadow-lg/30 mb-4">{name}</h1>
+            <h1 className="text-xl font-bold text-shadow-lg/30 mb-4 break-words">{name}</h1>
             <p className="text-xl font-bold">{role}</p>
           </div>
         </div>
