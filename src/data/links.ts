@@ -10,11 +10,6 @@ export const links: contact[] = [
         local: false,
     },
     {
-        link: "https://blog.nobeledgar3.cloud",
-        logo: "Globe",
-        local: false,
-    },
-    {
         link: "https://www.linkedin.com/in/nobeledgar/",
         logo: "Linkedin",
         local: false,
@@ -27,6 +22,11 @@ export const links: contact[] = [
     {
         link: "mailto:nobeledgar3@gmail.com",
         logo: "Mail",
+        local: false,
+    },
+    {
+        link: "https://blog.nobeledgar3.cloud",
+        logo: "Globe",
         local: false,
     }
 ];
