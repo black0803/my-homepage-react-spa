@@ -1,15 +1,17 @@
 import type { cert } from "../data/cert.ts";
+import { useState } from "react";
+
 
 interface CertificatesProps {
     certs: cert[];
 }
 
 export function Certificates({certs}: CertificatesProps) {
+    const [state, setState] = useState<number>(0);
     return (
         <section className="mt-5 mb-5">
             <h3 className="text-xl font-bold mb-4">Certificates</h3>
-            {certs.map(cert => (
-            
+            {certs.length <= 3 && certs.map(cert => (
             <div key={cert.name} className="mt-4 mb-4 block p-4 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all bg-white dark:bg-slate-900 group">
                 <h4 className="font-semibold text-slate-900 dark:text-slate-100 break-words">
                     {cert.name}
@@ -19,6 +21,32 @@ export function Certificates({certs}: CertificatesProps) {
                 </p>
             </div>
             ))}
+            {certs.length > 3 && state === 0 && certs.slice(0,3).map(cert => (
+            <div key={cert.name} className="mt-4 mb-4 block p-4 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all bg-white dark:bg-slate-900 group">
+                <h4 className="font-semibold text-slate-900 dark:text-slate-100 break-words">
+                    {cert.name}
+                </h4>
+                <p className="text-sm text-slate-400" >
+                    Issued by: {cert.issuer} | Issued Date: {cert.issued_date} | Expired Date: {cert.expired_date}
+                </p>
+            </div>
+            ))}
+            {certs.length > 3 && state === 1 && certs.map(cert => (
+            <div key={cert.name} className="mt-4 mb-4 block p-4 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all bg-white dark:bg-slate-900 group">
+                <h4 className="font-semibold text-slate-900 dark:text-slate-100 break-words">
+                    {cert.name}
+                </h4>
+                <p className="text-sm text-slate-400" >
+                    Issued by: {cert.issuer} | Issued Date: {cert.issued_date} | Expired Date: {cert.expired_date}
+                </p>
+            </div>
+            ))}
+            {certs.length > 3 && state === 0 && 
+                <button onClick={() => setState(1)}>Show all</button>
+            }
+            {certs.length > 3 && state === 1 && 
+                <button onClick={() => setState(0)}>Show less</button>
+            }
       </section>
     )
 }
