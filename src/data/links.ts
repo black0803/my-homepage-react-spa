@@ -10,7 +10,7 @@ export const links: contact[] = [
         local: false,
     },
     {
-        link: "https://www.linkedin.com/in/nobeledgar/",
+        link: "https://www.linkedin.com/in/nobeledgar3/",
         logo: "Linkedin",
         local: false,
     },
